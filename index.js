@@ -52,6 +52,7 @@ function endPoint(e) {
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+  document.getElementById('result').innerText = '';
 }
 
 function ocr() {
