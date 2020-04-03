@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>問題</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>問題</h1>
+  <h2 id="text"></h2>
+  <canvas class="canvasSolid" id="canvas" width="1000" height="300"></canvas><br>
+  <input type="button" onclick="clearCanvas()" value="クリア">
+  <input type="button" onclick="ocr()" value="解析">
+  <input type="button" onclick="next()" value="次の問題へ" />
+  <h3>解析結果</h3>
+  <p id="result"></p>
+</body>
+  <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+  <script type="text/javascript" src="./index.js"></script>
+</html>
