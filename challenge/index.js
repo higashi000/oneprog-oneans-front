@@ -61,7 +61,7 @@ function startPoint(e) {
 }
 
 function movePoint(e) {
-  if (e.buttons === 1 || e.witch === 1 || e.type === 'touchmove') {
+  if (e.buttons) {
     X = e.layerX;
     Y = e.layerY;
 
