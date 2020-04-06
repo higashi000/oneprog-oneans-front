@@ -21,8 +21,12 @@ function Regist() {
     },
     mode: 'no-cors'
   })
-    .then(res => res.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(resJSON) {
+      console.log(resJSON);
+    })
     .catch(error => console.error("Error:", error));
 }
 
