@@ -95,7 +95,7 @@ function clearCanvas() {
 function ocr() {
   let img = document.getElementById('canvas').toDataURL("image/jpeg");
 
-  Tesseract.recognize(img).then(function (result) {
+  Tesseract.recognize(img, 'eng').then(function (result) {
     document.getElementById('result').innerText = result.data.text;
   });
 }
@@ -104,7 +104,7 @@ function next() {
   let img = document.getElementById('canvas').toDataURL("image/jpeg");
   let ans = '';
 
-  Tesseract.recognize(img).then(function (result) {
+  Tesseract.recognize(img, 'eng').then(function (result) {
     ans = result.data.text;
     document.getElementById('result').innerText = result.data.text;
 
