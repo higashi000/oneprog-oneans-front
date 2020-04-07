@@ -28,7 +28,8 @@ fetch("http://localhost:8080/oneprog-oneans/checkanswer", {
 
     resJSON.forEach(function(value) {
       let form =
-          '<h2>問題文</h2>'
+          '<div class="result">'
+        + '<h2>問題文</h2>'
         + '<p>' + value.text + '</p>'
         + '<h2>あなたの答え</h2>'
         + '<p>' + value.youranswer + '</p>'
@@ -36,6 +37,7 @@ fetch("http://localhost:8080/oneprog-oneans/checkanswer", {
         + '<p>' + value.correctanswer + '</p>'
         + '<h2>結果</h2>'
         + '<p>' + value.Status + '</p>';
+        + '</div>'
       document.getElementById('result').insertAdjacentHTML('beforeend', form);
     });
   })
