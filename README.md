@@ -6,9 +6,9 @@ Front end for each question and answer Web App.<br>
 
 ## Language and Library
 - Language
-  - JavaScript
+  - TypeScript
+  - node.js
   - HTML
-  - go1.14 linux/amd64
 - Library
   - [Tesseract.js](https://tesseract.projectnaptha.com/)
 
@@ -20,7 +20,12 @@ $ git clone https://github.com/higashi000/oneprog-oneans-front
 
 $ cd oneprog-oneans-front
 
-$ go run main.go
+$ npm install tesseract.js typescript ts-loader webpack webpack-cli webpack-dev-server --save-dev
+
+$ npm start
 ```
 
 Afterwards, please access to [localhost:4000](http://localhost:4000).
+
+## Canvas and Tesseract.js DEMO
+![demo](https://github.com/higashi000/oneprog-oneans-front/blob/media/canvas_tesseractjs.gif)
