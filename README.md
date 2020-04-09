@@ -28,4 +28,4 @@ $ npm start
 Afterwards, please access to [localhost:4000](http://localhost:4000).
 
 ## Canvas and Tesseract.js DEMO
-![demo](https://github.com/higashi000/oneprog-oneans-front/blob/media/canvas_tesseractjs.gif)
+![demo](https://github.com/higashi000/oneprog-oneans-front/blob/master/canvas_tesseractjs.gif)
