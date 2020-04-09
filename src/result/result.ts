@@ -1,3 +1,7 @@
+import {ORIGIN_URL} from '../origin';
+
+const AXIOS = require('axios')
+
 let url = window.location.search;
 
 let hash = url.slice(1).split('&');
@@ -11,22 +15,21 @@ console.log(answers);
 
 let answer = answers[0].split(',');
 
-let data = {
+interface ResultData {
+  id: string,
+  youranswer: string[]
+}
+
+let result: ResultData = {
   id: problemID,
-  youranswer: answer,
-};
+  youranswer: answer
+}
 
-fetch("http://localhost:8080/oneprog-oneans/checkanswer", {
-  method: 'PUT',
-  body: JSON.stringify(data),
-})
+AXIOS.put(ORIGIN_URL + '/oneprog-oneans/checkanswer', result)
   .then(function(response) {
-    return response.json();
-  })
-  .then(function(resJSON) {
-    console.log(resJSON);
+    let ele: HTMLInputElement = <HTMLInputElement>document.getElementById('result');
 
-    resJSON.forEach(function(value) {
+    response.data.forEach(function(value) {
       let form =
           '<div class="result">'
         + '<h2>問題文</h2>'
@@ -37,7 +40,8 @@ fetch("http://localhost:8080/oneprog-oneans/checkanswer", {
         + '<p>' + value.correctanswer + '</p>'
         + '<h2>結果</h2>'
         + '<p>' + value.Status + '</p>';
-        + '</div>'
-      document.getElementById('result').insertAdjacentHTML('beforeend', form);
-    });
-  })
+        + '</div>';
+
+      ele.insertAdjacentHTML('beforeend', form);
+    })
+  });
