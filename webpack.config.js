@@ -4,7 +4,8 @@ module.exports = {
   entry: {
     registProblem: './src/registProblem/registProblem.ts',
     getSetlist: './src/getSetlist/getsetlist.ts',
-    challenge: './src/challenge/challenge.ts'
+    challenge: './src/challenge/challenge.ts',
+    result: './src/result/result.ts'
   },
   output: {
     filename: '[name].js',
