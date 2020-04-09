@@ -39,7 +39,8 @@ let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canv
 let ctx = canvas.getContext('2d');
 
 let flg: Boolean = false;
-let X, Y;
+let X: number;
+let Y: number;
 
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
