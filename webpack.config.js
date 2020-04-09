@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    registProblem: './src/registProblem/registProblem.ts'
+    registProblem: './src/registProblem/registProblem.ts',
+    getSetlist: './src/getSetlist/getsetlist.ts'
   },
   output: {
     filename: '[name].js',
