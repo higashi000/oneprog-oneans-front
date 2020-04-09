@@ -24,7 +24,7 @@ if (hash.length === 3 ) {
 AXIOS.get(ORIGIN_URL + '/oneprog-oneans/challenge/' + problemID + '/' + nowNum)
   .then(function (response) {
     if (response.data.Status === 'finish') {
-      window.location.href = '../result/index.html?id=' + problemID + '&answer=' + answer;
+      window.location.href = '../result.html?id=' + problemID + '&answer=' + answer;
     }
 
     let ele: HTMLInputElement = <HTMLInputElement>document.getElementById('text')
