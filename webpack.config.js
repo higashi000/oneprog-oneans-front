@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     registProblem: './src/registProblem/registProblem.ts',
-    getSetlist: './src/getSetlist/getsetlist.ts'
+    getSetlist: './src/getSetlist/getsetlist.ts',
+    challenge: './src/challenge/challenge.ts'
   },
   output: {
     filename: '[name].js',
